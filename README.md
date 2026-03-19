@@ -4,7 +4,7 @@ Jednoduchá počítačová hra
 
 - Téma:  Klon Call of Duty Zombies -> Unity
 
-Základní seznam funkcionalit:
+# Základní seznam funkcionalit:
 
 - 3D hra z pohledu třetí osoby  
 - Jednoduchý systém vln nepřátel – v každé vlně se bude zvyšovat počet zombie
