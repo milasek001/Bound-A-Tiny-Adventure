@@ -1,33 +1,17 @@
-# Cod-Zombies-Clone
+# Bound: A Tiny Adventure
 
 Jednoduchá počítačová hra
 
-- Téma:  Klon Call of Duty Zombies -> Unity
+- Téma:  2D plošinovka          Název hry - > Bound: A Tiny Adventure
 
 # Základní seznam funkcionalit:
 
-- 3D hra z pohledu třetí osoby  
-- Jednoduchý systém vln nepřátel – v každé vlně se bude zvyšovat počet zombie
-- Základní AI nepřátel – pohyb směrem ke hráči, útok na krátkou vzdálenost
- 
-- Jeden typ nepřítele – základní zombie
-  
-- Systém více zbraní 
-  
-- Střelba, přebíjení a omezená munice
- 
-- Systém bodů za eliminaci nepřátel
- 
-- Ukládání nejvyššího skóre pro každou mapu
- 
-- Tři různé mapy 
- 
-- Plynulý pohyb hráče a nepřátel 
-
-- Základní uživatelské rozhraní – tím se myslí: zdraví, kolikátá vlna, munice
-
-- Hlavní menu
- 
-- Zvukové efekty
-  
-- Restart hry po smrti hráče
+- 2D plošinovka
+- Plynulý pohybový model
+-  Základní AI nepřátel
+- Sběratelské předměty - Mince
+- 4 Levely
+- Odemykání úrovní 
+-  Základní uživatelské rozhraní 
+-  Hlavní menu 
+-  Audio systém 
