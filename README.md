@@ -14,4 +14,8 @@ Jednoduchá počítačová hra
 - Odemykání úrovní 
 -  Základní uživatelské rozhraní 
 -  Hlavní menu 
--  Audio systém 
+-  Audio systém
+
+  # Ukázka jumppadu
+
+<img width="1280" height="720" alt="Desktop 2026 06 01 - 16 21 06 05 (online-video-cutter com)" src="https://github.com/user-attachments/assets/8ca253f7-c672-4b84-8816-877d46f0f7b5" />
