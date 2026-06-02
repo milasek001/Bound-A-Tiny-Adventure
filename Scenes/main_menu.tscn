@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://7vy3uhyfgcps"]
+
+[ext_resource type="FontFile" uid="uid://c5d20pjp0l10r" path="res://Assets/Fonts/ken_fonts/kenpixel_mini.ttf" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://bmvkl4ho46vy1" path="res://Assets/Backgrounds/Free-Nature-Backgrounds-Pixel-Art3.png" id="1_ce3w2"]
+[ext_resource type="Script" uid="uid://c5gsvmpr8rv5h" path="res://Scripts/MainMenu.cs" id="1_n45e2"]
+[ext_resource type="Texture2D" uid="uid://crxs0rckw2qiy" path="res://Assets/Maps/Logo (1).png" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://cc2h6imscbl6t" path="res://Assets/Maps/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0005.png" id="4_ce3w2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ehe0"]
+texture = ExtResource("1_ce3w2")
+modulate_color = Color(0.9428232, 0.9428226, 0.94282264, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n45e2"]
+texture = ExtResource("4_ce3w2")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
+texture = ExtResource("4_ce3w2")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
+texture = ExtResource("4_ce3w2")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp0ys"]
+texture = ExtResource("4_ce3w2")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yhxw7"]
+load_path = "res://.godot/imported/tile_0005.png-88fba7692b6c033d07842dd097f40091.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trj04"]
+texture = SubResource("CompressedTexture2D_yhxw7")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce3w2"]
+
+[node name="Main_menu" type="Control" unique_id=1456488769]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n45e2")
+
+[node name="Panel" type="Panel" parent="." unique_id=1673386111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ehe0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1465282548]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -304.52148
+offset_top = 16.0
+offset_right = 304.52148
+offset_bottom = 374.0
+grow_horizontal = 2
+texture = ExtResource("2_1ehe0")
+expand_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1987468505]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.59406
+offset_top = 24.0
+offset_right = 194.59406
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1578342882]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ce3w2")
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1542395131]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cp0ys")
+theme_override_styles/hover = SubResource("StyleBoxTexture_trj04")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ce3w2")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="OnButtonStartPressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="OnButtonExitPressed"]

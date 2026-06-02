@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://m7cyssj3wm7g"]
+
+[ext_resource type="Texture2D" uid="uid://despo0dup2cnc" path="res://Assets/Maps/pixel_platformer_metal_expansion/Characters/tile_0001.png" id="1_mecpx"]
+[ext_resource type="Script" uid="uid://cxoa7o70cn3bi" path="res://Scripts/EnemyUpAndDown.cs" id="1_whych"]
+[ext_resource type="Texture2D" uid="uid://js0r2o5kyc0v" path="res://Assets/Maps/pixel_platformer_metal_expansion/Characters/tile_0000.png" id="2_whych"]
+[ext_resource type="PackedScene" uid="uid://cdewowf5ikn5x" path="res://Scenes/killzone.tscn" id="3_63k7p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8yid"]
+atlas = ExtResource("1_mecpx")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys5p2"]
+atlas = ExtResource("2_whych")
+region = Rect2(0, 0, 24, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_317ki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8yid")
+}],
+"loop": true,
+"name": &"Angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys5p2")
+}],
+"loop": true,
+"name": &"Calm",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbp6p"]
+size = Vector2(16, 17)
+
+[node name="GreenEnemyUpAndDown" type="Node2D" unique_id=1744351094]
+position = Vector2(0, -8)
+script = ExtResource("1_whych")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2140052619]
+sprite_frames = SubResource("SpriteFrames_317ki")
+animation = &"Calm"
+autoplay = "Calm"
+
+[node name="Killzone" parent="." unique_id=315791469 instance=ExtResource("3_63k7p")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1277196798]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_gbp6p")
+
+[node name="RayCastDown" type="RayCast2D" parent="." unique_id=1416115266]
+target_position = Vector2(0, 10)
+
+[node name="RayCastUp" type="RayCast2D" parent="." unique_id=125563341]
+target_position = Vector2(0, -8)

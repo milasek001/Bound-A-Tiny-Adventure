@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b4aq6rke6w24s"]
+
+[ext_resource type="Texture2D" uid="uid://cxw231t1y2rl3" path="res://Assets/Maps/kenney_pixel-platformer/Tilemap/tilemap-characters_packed.png" id="1_01tjr"]
+[ext_resource type="Script" uid="uid://ck1drb5enxxp" path="res://Scripts/EnemyYellow.cs" id="1_el3ep"]
+[ext_resource type="PackedScene" uid="uid://cdewowf5ikn5x" path="res://Scenes/killzone.tscn" id="2_el3ep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnyxp"]
+atlas = ExtResource("1_01tjr")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vseoo"]
+atlas = ExtResource("1_01tjr")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_phri0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnyxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vseoo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10cgq"]
+size = Vector2(20, 24)
+
+[node name="EnemyBlue" type="Node2D" unique_id=1455680170]
+script = ExtResource("1_el3ep")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2039245128]
+sprite_frames = SubResource("SpriteFrames_phri0")
+autoplay = "default"
+frame_progress = 0.4496464
+
+[node name="Killzone" parent="." unique_id=315791469 instance=ExtResource("2_el3ep")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=453199080]
+shape = SubResource("RectangleShape2D_10cgq")
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=2007181050]
+target_position = Vector2(-12, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=2084898199]
+target_position = Vector2(12, 0)

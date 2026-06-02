@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://0tx44ps46id1"]
+
+[ext_resource type="FontFile" uid="uid://c5d20pjp0l10r" path="res://Assets/Fonts/ken_fonts/kenpixel_mini.ttf" id="1_jo1ms"]
+[ext_resource type="Script" uid="uid://dbygxnbdtocb5" path="res://Scripts/HUD.cs" id="1_psnte"]
+[ext_resource type="Texture2D" uid="uid://388i4im81jva" path="res://Assets/Maps/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0017.png" id="2_s3jbq"]
+[ext_resource type="Texture2D" uid="uid://d1wtrh178q8re" path="res://Assets/Sprites/coinAlone.png" id="3_psnte"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c3eba"]
+texture = ExtResource("2_s3jbq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1850752111]
+script = ExtResource("1_psnte")
+
+[node name="Control" type="Control" parent="." unique_id=952981546]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1236825565]
+layout_mode = 1
+offset_left = 1107.0
+offset_top = 12.0
+offset_right = 1292.0
+offset_bottom = 98.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_c3eba")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel" unique_id=643488327]
+layout_mode = 0
+offset_left = 19.0
+offset_top = -6.0
+offset_right = 358.0
+offset_bottom = 89.0
+theme_override_constants/separation = -220
+
+[node name="CoinLabel" type="Label" parent="Control/Panel/HBoxContainer" unique_id=800894840]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_jo1ms")
+theme_override_font_sizes/font_size = 76
+text = "0"
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel/HBoxContainer" unique_id=527924225]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_psnte")
+stretch_mode = 4

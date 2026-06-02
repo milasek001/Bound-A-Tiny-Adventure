@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://cm5x4suf2kqnj"]
+
+[ext_resource type="Script" uid="uid://bgypfx5pgymqk" path="res://Scripts/LvlSelector.cs" id="1_1aiga"]
+[ext_resource type="Texture2D" uid="uid://bmvkl4ho46vy1" path="res://Assets/Backgrounds/Free-Nature-Backgrounds-Pixel-Art3.png" id="1_dyar8"]
+[ext_resource type="FontFile" uid="uid://c5d20pjp0l10r" path="res://Assets/Fonts/ken_fonts/kenpixel_mini.ttf" id="2_qsork"]
+[ext_resource type="Texture2D" uid="uid://becn0m4f2siyt" path="res://Assets/Maps/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0000.png" id="3_1aiga"]
+[ext_resource type="Texture2D" uid="uid://cc2h6imscbl6t" path="res://Assets/Maps/kenney_ui-pack-pixel-adventure/Tiles/Large tiles/Thick outline/tile_0005.png" id="4_qsork"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_33k5f"]
+texture = ExtResource("1_dyar8")
+modulate_color = Color(0.9428228, 0.94282264, 0.94282264, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hk7u"]
+texture = ExtResource("3_1aiga")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1aiga"]
+texture = ExtResource("4_qsork")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_33k5f"]
+load_path = "res://.godot/imported/tile_0005.png-88fba7692b6c033d07842dd097f40091.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rg42j"]
+texture = SubResource("CompressedTexture2D_33k5f")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66imu"]
+load_path = "res://.godot/imported/tile_0005.png-88fba7692b6c033d07842dd097f40091.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sk44y"]
+texture = SubResource("CompressedTexture2D_66imu")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qsork"]
+texture = ExtResource("4_qsork")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1aiga"]
+load_path = "res://.godot/imported/tile_0005.png-88fba7692b6c033d07842dd097f40091.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_66imu"]
+texture = SubResource("CompressedTexture2D_1aiga")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.47007585, 0.47007585, 0.47007585, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sk44y"]
+load_path = "res://.godot/imported/tile_0005.png-88fba7692b6c033d07842dd097f40091.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xofmw"]
+texture = SubResource("CompressedTexture2D_sk44y")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[node name="Lvl_Selector" type="Control" unique_id=1566508347 node_paths=PackedStringArray("Level1Btn", "Level2Btn", "Level3Btn", "Level4Btn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1aiga")
+Level1Btn = NodePath("VBoxContainer/Button")
+Level2Btn = NodePath("VBoxContainer/Button2")
+Level3Btn = NodePath("VBoxContainer/Button3")
+Level4Btn = NodePath("VBoxContainer/Button4")
+
+[node name="Panel" type="Panel" parent="." unique_id=2092248745]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_33k5f")
+
+[node name="Label" type="Label" parent="." unique_id=1631457666]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -260.5
+offset_top = 14.0
+offset_right = 260.5
+offset_bottom = 134.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.26, 0.26, 0.26, 1)
+theme_override_fonts/font = ExtResource("2_qsork")
+theme_override_font_sizes/font_size = 73
+theme_override_styles/normal = SubResource("StyleBoxTexture_2hk7u")
+text = "Select Level"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1605920570]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -194.0
+offset_right = 185.0
+offset_bottom = 268.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1339742236]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_qsork")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_1aiga")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rg42j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sk44y")
+text = "Level 1"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=921755074]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_qsork")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_1aiga")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rg42j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sk44y")
+text = "Level 2"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1427443828]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_qsork")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_1aiga")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rg42j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sk44y")
+text = "Level 3"
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=862298530]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_qsork")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_1aiga")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rg42j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sk44y")
+text = "Level 4"
+
+[node name="Button" type="Button" parent="." unique_id=100213157]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 664.0
+offset_right = 151.81538
+offset_bottom = 732.0
+theme_override_fonts/font = ExtResource("2_qsork")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxTexture_qsork")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_66imu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xofmw")
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="OnButtonLvl1Pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="OnButtonLvl2Pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="OnButtonLvl3Pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="OnButtonLvl4Pressed"]
+[connection signal="pressed" from="Button" to="." method="OnButtonBackPressed"]
